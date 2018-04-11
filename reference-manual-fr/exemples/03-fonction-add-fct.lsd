@@ -1,0 +1,14 @@
+program a;
+function main():void;
+var
+	x int;
+	function addTo(a : int, b : int):int;
+		var
+ 		begin
+			return a + b;
+		end;
+begin
+	x := 2;
+	x := addTo(x, 3);
+end;
+end;

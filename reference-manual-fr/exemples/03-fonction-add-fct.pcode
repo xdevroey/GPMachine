@@ -1,0 +1,230 @@
+;************************
+; Starting LSD compiler :
+;************************
+; Building program tree: 
+; Building program tree: done 
+;************************
+; Printing Tree         :
+;************************
+;-> [0x100100a40 - PROGRAM] id=a, expressionType=N.A., nbrSons=1, father=0x0
+;  |-> [0x1001009d0 - FUNCTION_DECL] id=main, expressionType=N.A., nbrSons=5, father=0x100100a40
+;  |  |-> NULL
+;  |  |-> [0x100100100 - VOID] id=(null), expressionType=N.A., nbrSons=0, father=0x1001009d0
+;  |  |-> [0x1001001b0 - VARIABLE_DECL] id=x, expressionType=N.A., nbrSons=2, father=0x1001009d0
+;  |  |  |-> [0x100100160 - INTEGER_NODE] id=(null), expressionType=int, nbrSons=0, father=0x1001001b0
+;  |  |  |-> [0x1001005e0 - FUNCTION_DECL] id=addTo, expressionType=N.A., nbrSons=5, father=0x1001001b0
+;  |  |  |  |-> [0x100100270 - PARAMETER_DECL] id=a, expressionType=N.A., nbrSons=3, father=0x1001005e0
+;  |  |  |  |  |-> [0x1001002d0 - VALUE_PASSAGE] id=(null), expressionType=N.A., nbrSons=0, father=0x100100270
+;  |  |  |  |  |-> [0x100100220 - INTEGER_NODE] id=(null), expressionType=int, nbrSons=0, father=0x100100270
+;  |  |  |  |  |-> [0x100100380 - PARAMETER_DECL] id=b, expressionType=N.A., nbrSons=3, father=0x100100270
+;  |  |  |  |  |  |-> [0x1001003e0 - VALUE_PASSAGE] id=(null), expressionType=N.A., nbrSons=0, father=0x100100380
+;  |  |  |  |  |  |-> [0x100100330 - INTEGER_NODE] id=(null), expressionType=int, nbrSons=0, father=0x100100380
+;  |  |  |  |  |  |-> NULL
+;  |  |  |  |-> [0x100100430 - INTEGER_NODE] id=(null), expressionType=int, nbrSons=0, father=0x1001005e0
+;  |  |  |  |-> NULL
+;  |  |  |  |-> [0x100100590 - RETURN] id=(null), expressionType=N.A., nbrSons=2, father=0x1001005e0
+;  |  |  |  |  |-> [0x100100540 - PLUS] id=(null), expressionType=N.A., nbrSons=2, father=0x100100590
+;  |  |  |  |  |  |-> [0x100100490 - VARIABLE] id=a, expressionType=N.A., nbrSons=0, father=0x100100540
+;  |  |  |  |  |  |-> [0x1001004f0 - VARIABLE] id=b, expressionType=N.A., nbrSons=0, father=0x100100540
+;  |  |  |  |  |-> NULL
+;  |  |  |  |-> NULL
+;  |  |-> [0x100100700 - ASSIGN] id=(null), expressionType=N.A., nbrSons=3, father=0x1001009d0
+;  |  |  |-> [0x100100660 - VARIABLE] id=x, expressionType=N.A., nbrSons=0, father=0x0
+;  |  |  |-> [0x1001006b0 - LITTERAL] id=(null), expressionType=int, nbrSons=0, father=0x0
+;  |  |  |-> [0x100100970 - ASSIGN] id=(null), expressionType=N.A., nbrSons=3, father=0x100100700
+;  |  |  |  |-> [0x100100770 - VARIABLE] id=x, expressionType=N.A., nbrSons=0, father=0x0
+;  |  |  |  |-> [0x100100920 - FUNCTION_CALL] id=addTo, expressionType=N.A., nbrSons=2, father=0x0
+;  |  |  |  |  |-> [0x100100830 - PARAMETER] id=(null), expressionType=N.A., nbrSons=2, father=0x100100920
+;  |  |  |  |  |  |-> [0x1001007e0 - VARIABLE] id=x, expressionType=N.A., nbrSons=0, father=0x100100830
+;  |  |  |  |  |  |-> [0x1001008d0 - PARAMETER] id=(null), expressionType=N.A., nbrSons=2, father=0x100100830
+;  |  |  |  |  |  |  |-> [0x100100880 - LITTERAL] id=(null), expressionType=int, nbrSons=0, father=0x1001008d0
+;  |  |  |  |  |  |  |-> NULL
+;  |  |  |  |  |-> NULL
+;  |  |  |  |-> NULL
+;  |  |-> NULL
+;
+; Building SymTable: 
+; buildSymTable call with (root=[0x100100a40])
+; buildFunction call with (node=[0x1001009d0], fctDepth=0)
+; buildImplementedFunction call with (node=[0x1001009d0], fctDepth=0)
+; buildImplementedFunction: depth assigned
+; buildImplementedFunction: building parameters list
+; buildImplementedFunction: building returned type
+; buildImplementedFunction: building local variables and functions
+; buildLocalDeclarations call with (node=[0x1001001b0], father=[0x100100aa0], fctDepth=1, varOffset=0)
+; It is a variable
+; buildVariable call with (node=[0x1001001b0], offset=0)
+; variable x build
+; It is a function
+; buildFunction call with (node=[0x1001005e0], fctDepth=1)
+; buildImplementedFunction call with (node=[0x1001005e0], fctDepth=1)
+; buildImplementedFunction: depth assigned
+; buildImplementedFunction: building parameters list
+; buildParameter call with (node=[0x100100270], offset=0)
+; buildParameter call with (node=[0x100100380], offset=1)
+; buildImplementedFunction: building returned type
+; buildImplementedFunction: building local variables and functions
+; buildLocalDeclarations call with (node=[0x0], father=[0x100100b50], fctDepth=2, varOffset=2)
+; buildImplementedFunction: Link to the function node
+; function addTo build
+; buildImplementedFunction: Link to the function node
+; checkForwardsFunctions call with (symTable=[0x100100a90])
+; checkFunctionForwardsFunctions call with (fct=[0x100100aa0])
+; checkFunctionForwardsFunctions call with (fct=[0x100100b50])
+; checkFunctionForwardsFunctions call with (fct=[0x0])
+; checkFunctionForwardsFunctions call with (fct=[0x0])
+; checkFunctionForwardsFunctions call with (fct=[0x0])
+; Building SymTable: done 
+;
+;************************
+; Printing SymTable     :
+;************************
+;-> [0x100100aa0 - function] name=main, returns=void, node=0x1001009d0, father=0x0 
+;  |-> [0x100100b50 - function] name=addTo, returns=int, node=0x1001005e0, father=0x100100aa0 
+;  |    [0x100100bd0 - param] a : int
+;  |    [0x100100c00 - param] b : int
+;  |-> [0x100100b20 - variable] name=x : int 
+;
+; Checking naming conventions: 
+; checkFunctionNamingConventions call with (fct=[0x100100aa0])
+; checkParametersNames call with (param=[0x0])
+; checkLocalVariablesNames call with (var=[0x100100b20])
+; checkLocalVariablesNames call with (var=[0x0])
+; checkParametersAndVariablesNames call with (param=[0x0], var=[p])
+; checkFunctionsDeclarations call with (fct=[0x100100b50])
+; checkFunctionsDeclarations call with (fct=[0x0])
+; checkFunctionNamingConventions call with (fct=[0x100100b50])
+; checkParametersNames call with (param=[0x100100bd0])
+; checkParametersNames call with (param=[0x0])
+; checkLocalVariablesNames call with (var=[0x0])
+; checkParametersAndVariablesNames call with (param=[0x100100bd0], var=[p])
+; checkFunctionsDeclarations call with (fct=[0x0])
+; checkFunctionNamingConventions call with (fct=[0x0])
+; checkFunctionNamingConventions call with (fct=[0x0])
+; checkFunctionNamingConventions call with (fct=[0x0])
+; Checking naming conventions: done 
+;
+; Checking types: 
+; checkFunctionTypes call with (symTableEntry=[0x100100aa0])
+; checkFunctionTypes: retrieving root node=[0x1001009d0])
+; checkInstructionTypes call with (node=[0x100100700], symTableEntry=[0x100100aa0])
+; getExpressionType call with (node=[0x100100660], symTableEntry=[0x100100aa0])
+; getExpressionType call with (node=[0x1001006b0], symTableEntry=[0x100100aa0])
+; checkInstructionTypes call with (node=[0x100100970], symTableEntry=[0x100100aa0])
+; getExpressionType call with (node=[0x100100770], symTableEntry=[0x100100aa0])
+; getExpressionType call with (node=[0x100100920], symTableEntry=[0x100100aa0])
+; functionCallLookupFromNode call with (node=[0x100100920], context=[0x100100aa0])
+; getExpressionType call with (node=[0x100100830], symTableEntry=[0x100100aa0])
+; getExpressionType call with (node=[0x1001007e0], symTableEntry=[0x100100aa0])
+; getExpressionType call with (node=[0x1001008d0], symTableEntry=[0x100100aa0])
+; getExpressionType call with (node=[0x100100880], symTableEntry=[0x100100aa0])
+; functionCallLookup call with (currentFct=[0x100100aa0], fctName=addTo, nbrParameters=2)
+; checkInstructionTypes call with (node=[0x0], symTableEntry=[0x100100aa0])
+; checkFunctionTypes call with (symTableEntry=[0x100100b50])
+; checkFunctionTypes: retrieving root node=[0x1001005e0])
+; checkInstructionTypes call with (node=[0x100100590], symTableEntry=[0x100100b50])
+; getExpressionType call with (node=[0x100100540], symTableEntry=[0x100100b50])
+; getExpressionType call with (node=[0x100100490], symTableEntry=[0x100100b50])
+; getExpressionType call with (node=[0x1001004f0], symTableEntry=[0x100100b50])
+; checkInstructionTypes call with (node=[0x0], symTableEntry=[0x100100b50])
+; checkFunctionTypes call with (symTableEntry=[0x0])
+; checkFunctionTypes call with (symTableEntry=[0x0])
+; checkFunctionTypes call with (symTableEntry=[0x0])
+; Checking types: done 
+;
+;
+;************************
+; Printing PCode        :
+;************************
+; printPCode call with (symTable=[0x100100a90])
+; printPCode: context bound
+; printProgramPCode call with (node=[0x1001009d0])
+; ************* Start program *************
+ssp 6
+ujp @begin
+; ********************
+; Main Function :
+; ********************
+; ------ Start function main 1 ------
+define @main1
+ssp 6
+; --- Start initialize local isets
+; --- End initialize local isets
+ujp @codemain1
+; ------ Start function addTo 2 ------
+define @addTo2
+ssp 7
+; --- Start initialize local isets
+; --- End initialize local isets
+ujp @codeaddTo2
+define @codeaddTo2
+; --- Start return
+lda i 0 0
+; --- Start addition
+; --- Start variable val
+lod i 0 5
+; --- End variable val
+; --- Start variable val
+lod i 0 6
+; --- End variable val
+add i
+; --- End addition
+sto i
+retf
+; --- End return
+retf
+; ------ End function addTo 2 ------
+define @codemain1
+; --- Start assign
+; printVariableReferencePCode call with (node=[0x100100660])
+; --- Start variable ref
+lda i 0 5
+; --- End variable ref
+; --- Start integer literal
+ldc i 2
+; --- End integer literal
+sto i
+; --- End assign
+; --- Start assign
+; printVariableReferencePCode call with (node=[0x100100770])
+; --- Start variable ref
+lda i 0 5
+; --- End variable ref
+; --- Start function call
+; functionCallLookupFromNode call with (node=[0x100100920], context=[0x100100aa0])
+; getExpressionType call with (node=[0x100100830], symTableEntry=[0x100100aa0])
+; getExpressionType call with (node=[0x1001008d0], symTableEntry=[0x100100aa0])
+; functionCallLookup call with (currentFct=[0x100100aa0], fctName=addTo, nbrParameters=2)
+mst 0
+; --- Start variable val
+lod i 0 5
+; --- End variable val
+; --- Start integer literal
+ldc i 3
+; --- End integer literal
+cup 2 @addTo2
+; --- End function call
+sto i
+; --- End assign
+retf
+; ------ End function main 1 ------
+; ********************
+; Start program :
+; ********************
+define @begin
+mst 0
+cup 0 @main1
+pop
+stp
+; ************* End program   *************
+;
+;
+;************************
+; Free tree             :
+;************************
+;
+;
+;************************
+; Free SymTable         :
+;************************
+;
