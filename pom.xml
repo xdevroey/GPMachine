@@ -4,7 +4,7 @@
 	
     <groupId>be.unamur.info</groupId>
     <artifactId>gpmachine</artifactId>
-    <version>3.0.1-SNAPSHOT</version>
+    <version>3.0.2</version>
 	
     <name>GPMachine</name>
     <description>GPMachine: a virtual machine interpreting P-Code</description>
@@ -103,7 +103,8 @@
         <connection>scm:git:git@github.com:xdevroey/GPMachine.git</connection>
         <url>scm:git:git@github.com:xdevroey/GPMachine.git</url>
         <developerConnection>scm:git:git@github.com:xdevroey/GPMachine.git</developerConnection>
-    </scm>    
+      <tag>gpmachine-3.0.2</tag>
+  </scm>    
     <build>
         <plugins>
             <plugin>
