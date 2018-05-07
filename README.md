@@ -1,5 +1,7 @@
 # GPMachine: a virtual machine interpreting P-Code
 
+[![Build Status](https://travis-ci.com/xdevroey/GPMachine.svg?branch=master)](https://travis-ci.com/xdevroey/GPMachine)
+
 ## GPMachine description
 
 GPMachine is a PCode interpreter (see [Reinard Wilhelm and Dieter Maurer, Compiler Design](http://www.cs.ioc.ee/yik/lib/2/Wilhelm1.html)). It takes as input a file containing PCode and interprets it, asking interactively the user when user input is required. The only allowed input are natural numbers. This machine is based on a previous machine by Yiti group but has largely been rewritten to perform type checking on-the-fly, thus ensuring that erroneous compiled code can be detected sooner. It has a fancy Graphical User Interface (see `-gui` option, below) that will help students in understanding the inner workings of this machine.
