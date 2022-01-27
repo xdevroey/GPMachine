@@ -1,6 +1,7 @@
 # GPMachine: a virtual machine interpreting P-Code
 
 [![Build Status](https://travis-ci.com/xdevroey/GPMachine.svg?branch=master)](https://travis-ci.com/xdevroey/GPMachine)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5059924.svg)](https://doi.org/10.5281/zenodo.5059924)
 
 ## GPMachine description
 
